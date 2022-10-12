@@ -41,8 +41,10 @@ The third would be `([a-z\.]{2,6})`, this would be the end portion of an email- 
 ### Bracket Expressions
 Bracket Expressions help to match a single character or collating elements eg. `([a-z0-9]+)`- this particular bracket expression allows lowercase characters from a-z and digits from 0-9. You can also use `\d` to match digits from 0-9 as well as the `\w` to match a-z, A-Z, 0-9, including _ (underscore).
 ### Character Classes
-
+A character class is a set of characters that are within square brackets. It specifies the characters that will match a single character from a given input string.
+E.g `([hierf])` will match lowercase h,i,e,r or f from the input string.
 ### The OR Operator
+You can use the OR `|` operator to match characters or expression of either the left or right of the | operator. For example `(h|H)` will match either h or H from the input string.
 
 ### Flags
 
