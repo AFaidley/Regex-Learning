@@ -39,7 +39,7 @@ The second would be `([\da-z\.-]+)`, this would be the second portion of an emai
 The third would be `([a-z\.]{2,6})`, this would be the end portion of an email- usually `com`. This particular Regex allows this group to match any lowercase letters from a-z and has a min length of 2 and a max of 6.
 
 ### Bracket Expressions
-
+Bracket Expressions help to match a single character or collating elements eg. `([a-z0-9]+)`- this particular bracket expression allows lowercase characters from a-z and digits from 0-9. You can also use `\d` to match digits from 0-9 as well as the `\w` to match a-z, A-Z, 0-9, including _ (underscore).
 ### Character Classes
 
 ### The OR Operator
