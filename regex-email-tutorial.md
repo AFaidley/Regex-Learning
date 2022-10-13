@@ -31,7 +31,7 @@ The anchors used in this particular Regex were `^` and `$`.
 Eg. `^Thanks$`
 
 ### Quantifiers
-The quantifiers used in this particular Regex were + and {2,6}.
+The quantifiers used in this particular Regex were `+` and `{2,6}`.
 <br>
 `+` -Matches the preceding element/token one or more times.
 <br>
@@ -47,20 +47,25 @@ The second would be `([\da-z\.-]+)`, this would be the second portion of an emai
 The third would be `([a-z\.]{2,6})`, this would be the end portion of an email- usually `com`. This particular Regex allows this group to match any lowercase letters from a-z and has a min length of 2 and a max of 6.
 
 ### Bracket Expressions
-Bracket Expressions help to match a single character or collating elements eg. `([a-z0-9]+)`- this particular bracket expression allows lowercase characters from a-z and digits from 0-9. You can also use `\d` to match digits from 0-9 as well as the `\w` to match a-z, A-Z, 0-9, including _ (underscore).
+Bracket Expressions help to match a single character or collating elements eg. `([a-z0-9]+)`- this particular bracket expression, found in our email Regex, allows lowercase characters from a-z and digits from 0-9. You can also use `\d` to match digits from 0-9 as well as the `\w` to match a-z, A-Z, 0-9, including _ (underscore).
 
 ### Character Classes
-A character class is a set of characters that are within square brackets. It specifies the characters that will match a single character from a given input string.
+A character class is a set of characters that are within square brackets. It specifies the characters that will match a single character from the input string.
+In our email Regex, we see the character class of `a-z` frequently used- this will allow lowercase letters from a-z to be matched from the input string.
 <br>
 E.g `([hierf])` will match lowercase h,i,e,r or f from the input string.
 
 ### The OR Operator
 You can use the OR `|` operator to match characters or expression of either the left or right of the | operator. For example `(h|H)` will match either h or H from the input string.
+<br>
+This particular Regex does not contain an `|` operator but I added it to help anyone who may come across it.
 
 ### Flags
 Expression flags change how the expression is interpreted. Flags follow the closing forward slash of the expression e.g `)$/ig`.
 <br>
 In the given example the `i` causes the search to no longer be case sensitive while the `g` causes the search to look for all matches rather than just the first match being returned.
+<br>
+Our particular email Regex did not contain any Expression flags but I have used a different example to assist anyone who may come across it.
 
 ### Character Escapes
 Escape sequences can be used to insert reserved, special, and unicode characters. All escaped characters begin with the `\` character.
